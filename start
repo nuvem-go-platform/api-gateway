@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Starting docker"
+docker-compose up -d
+
+echo "Starting ms-auth"
+php -S 0.0.0.0:8081 -t services/srv1 &
+
+echo "Starting ms-catalog"
+php -S 0.0.0.0:8082 -t services/srv2 &
+
+echo "Starting ms-customer"
+php -S 0.0.0.0:8083 -t services/srv3 &
