@@ -6,7 +6,6 @@ services:
       container_name: api-gateway
       working_dir: /www
       volumes:
-          - ./www:/www 
           - ./docker/nginx:/etc/nginx/conf.d
       ports:
        - "80:80"
