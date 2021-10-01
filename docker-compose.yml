@@ -6,7 +6,6 @@ services:
     working_dir: /www
     volumes:
       - ./docker/nginx:/etc/nginx/conf.d
-      - ../nose/build:/www
     ports:
       - "80:80"
     networks:
